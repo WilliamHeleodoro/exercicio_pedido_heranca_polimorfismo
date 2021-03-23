@@ -32,7 +32,7 @@ public class ProdutoImportado extends Produto {
 		StringBuilder sb = new StringBuilder();
 		sb.append(nome);
 		sb.append(" $ " + totalPreco());
-		sb.append("(Taxa de Alfandega: $ " + precoAlfandega);
+		sb.append(" (Taxa de Alfandega: $ " + precoAlfandega + ")");
 
 		return sb.toString();
 	}

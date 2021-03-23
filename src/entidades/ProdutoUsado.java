@@ -1,8 +1,11 @@
 package entidades;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ProdutoUsado extends Produto {
+	SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+	
 	private Date dtfabricacao;
 
 	public ProdutoUsado() {
@@ -26,7 +29,7 @@ public class ProdutoUsado extends Produto {
 	public String tabelaPreco() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.tabelaPreco());
-		sb.append("(Data de Fabricação: " + dtfabricacao);
+		sb.append(" (Data de Fabricação: " + sdf1.format(dtfabricacao) + ")");
 
 		return sb.toString();
 	}
